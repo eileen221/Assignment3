@@ -1,0 +1,35 @@
+* {
+  font-family: arial;
+}
+
+#table {
+  border-collapse: collapse;
+  border: 1px solid;
+  margin: auto;
+  padding: 20px;
+}
+tr,
+th,
+td {
+  border: 1px solid;
+  padding: 3px 10px;
+  text-align: center;
+}
+
+#lists {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  display: flex;
+}
+
+ul,
+ol {
+  width: 50%;
+  float: left;
+}
+
+#dropDown {
+  display: block;
+  margin: 0 auto;
+}
