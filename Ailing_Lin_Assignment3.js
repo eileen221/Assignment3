@@ -47,10 +47,10 @@ let headerRow = document.createElement("tr");
 headers.forEach((ele) => {
   let header = document.createElement("th");
   let textNode = document.createTextNode(ele);
-  header.appendChild(textNode);
-  headerRow.appendChild(header);
+  header.append(textNode);
+  headerRow.append(header);
 });
-table.appendChild(headerRow);
+table.append(headerRow);
 
 //table cells
 let contents = [...tableInfo.tableContent];
@@ -60,13 +60,13 @@ contents.forEach((ele) => {
   Object.values(ele).forEach((text) => {
     let cell = document.createElement("td");
     let textNode = document.createTextNode(text);
-    cell.appendChild(textNode);
-    row.appendChild(cell);
+    cell.append(textNode);
+    row.append(cell);
   });
-  table.appendChild(row);
+  table.append(row);
 });
 
-body.appendChild(table);
+body.append(table);
 
 /*
 
@@ -85,20 +85,20 @@ ol.setAttribute("start", "1");
 
 for (let i = 0; i < list.length; i++) {
   let li = document.createElement("li");
-  li.innerHTML = list[i];
-  ol.appendChild(li);
+  li.textContent = list[i];
+  ol.append(li);
 }
-container.appendChild(ol);
+container.append(ol);
 
 let ul = document.createElement("ul");
 
 for (let i = 0; i < list.length; i++) {
   let li = document.createElement("li");
-  li.innerHTML = list[i];
-  ul.appendChild(li);
+  li.textContent = list[i];
+  ul.append(li);
 }
-container.appendChild(ul);
-body.appendChild(container);
+container.append(ul);
+body.append(container);
 
 /*
 
@@ -124,7 +124,7 @@ for (let i = 0; i < dropDownList.length; i++) {
   let option = document.createElement("option");
   option.value = dropDownList[i].value;
   option.text = dropDownList[i].content;
-  selectList.appendChild(option);
+  selectList.append(option);
 }
 
-body.appendChild(selectList);
+body.append(selectList);
